@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <t1>Exercício C</t1>
+  <p><b>C)</b> Elabore um programa para uma loja, o qual leia o preço de um produto e informe as opções de pagamento da
+    loja.Caculee informe o valor para pagamento à vista com 10% de desconto e o valor em 3x.</p>
+  <script>
+    let preco = prompt("Digite o preço R$: ");
+    let precoAVista = parseFloat(preco) - ((parseFloat(preco) * 10) / 100);
+    let precoAPrazo = parseFloat(preco) / 3;
+    alert(`Preço R$:${parseFloat(preco)} Preco à vista R$: ${precoAVista} ou 3x de R$: ${precoAPrazo.toFixed(2)}`);
+  </script>
+</body>
+
+</html>
