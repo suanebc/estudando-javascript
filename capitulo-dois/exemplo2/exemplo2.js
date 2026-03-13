@@ -11,4 +11,6 @@ frm.addEventListener("submit", (e) =>{
 
   resposta1.innerText = titulo
   resposta2.innerText = `${horas} horas e ${minutos} minutos`
+
+  e.preventDefault()
 })
