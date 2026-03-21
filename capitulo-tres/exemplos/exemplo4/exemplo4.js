@@ -3,7 +3,7 @@
 //  o número máximo de vezes que ocliente pode parcelar
 //  essa compra e o valor de cada parcela 
 // condições: 
-// 1) o valor mínimo de cada parcela é de R$ 200,00 
+// 1) o valor mínimo de cada parcela é de R$ 20,00 
 // 2) Só pode parcelar até 6x
 
 const prompt = require('prompt-sync')({sigint: true});
