@@ -1,5 +1,5 @@
 const frm = document.querySelector("form");
-const numeroDecrecente = document.querySelector("h3");
+const numeroDecrescente = document.querySelector("h3");
 
 
 frm.addEventListener("submit", (e) => {
@@ -10,6 +10,6 @@ frm.addEventListener("submit", (e) => {
   for(let i = numero; i>0; i--) {
     resposta = resposta + i + "," ;
   }
-  numeroDecrecente.innerText = resposta;
+  numeroDecrescente.innerText = resposta;
  
 })
