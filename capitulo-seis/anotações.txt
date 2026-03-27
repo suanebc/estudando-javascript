@@ -1,0 +1,21 @@
+
+VETORES :
+Métodos Javascript para exclusão e inclusão de itens 
+push()---------- add elemento ao final do vetor
+unshift()------- add ele mento ao início e descola os demis uma posição abaixo
+pop()----------- remove o último elemento
+shift()--------- remove o primeiro elemento do vetor e descolca ods demais uma pisição acima
+
+TAMANHO DO VETOR :
+length()
+
+EXIBIR ELEMENTOS :
+toString() - separa os elemetos por vírgula
+join() - podemos indicar qual caracter pode separar os elementos
+
+PERCORRER UM VETOR :
+for ... of
+forEach()
+
+
+
