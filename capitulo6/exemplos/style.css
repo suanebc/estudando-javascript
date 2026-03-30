@@ -1,0 +1,19 @@
+h1, h3{
+  border-bottom-style: inset;
+  color: green;
+}
+pre {
+  font-size: 1.2em;
+}
+.fonte-azul{
+  color: blue;
+}
+.aculta {
+  display: inline;
+}
+.exibe{
+  display: nome;
+}
+.italico {
+  font-style: italic;
+}
