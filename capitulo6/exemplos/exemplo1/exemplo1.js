@@ -23,13 +23,15 @@ frm.btUrgencia.addEventListener("ckick", () => {
     alert("Informe o nome do paciente a ser atendido em caráter de urgência");
     frm.inPaciente.focus();
     return;
+  } else {
+    const nome = frm.inPaciente.value;
+    pacientes.unshift(nome);
+    pacientes.forEach((paciente, i) => (lista += `${i + 1}. ${paciente}\n`));
+    respostaLista.innerText = lista;
+    frm.inPaciente.value = "";
+    frm.inPaciente.focus();
   }
-  const nome = frm.inPaciente.value;
-  pacientes.unshift(nome);
-  pacientes.forEach((paciente, i) => (lista += `${i + 1}. ${paciente}\n`));
-  respostaLista.innerText = lista;
-  frm.inPaciente.value = "";
-  frm.inPaciente.focus();
+
 })
 frm.btAtender.addEventListener("click", () => {
   if (pacientes.length == 0) {
