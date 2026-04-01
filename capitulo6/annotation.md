@@ -1,5 +1,4 @@
 
-VETORES :
 Métodos Javascript para exclusão e inclusão de itens 
 push()---------- add elemento ao final do vetor
 unshift()------- add ele mento ao início e descola os demis uma posição abaixo
@@ -16,6 +15,10 @@ join() - podemos indicar qual caracter pode separar os elementos
 PERCORRER UM VETOR :
 for ... of
 forEach()
+
+Atribuição via desestruturação
+
+
 
 
 
