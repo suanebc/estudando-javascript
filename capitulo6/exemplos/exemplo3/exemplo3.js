@@ -1,5 +1,5 @@
 const frm = document.querySelector("form")       // obtém elementos da página
-const resp = document.querySelector("pre")
+const resposta = document.querySelector("pre")
 
 const carros = []      // declara vetor global
 
@@ -23,7 +23,7 @@ frm.btListar.addEventListener("click", () => {  // "escuta" clique em btListar
   // método reduce() concatena uma string, obtendo modelo e preço de cada veículo
   const lista = carros.reduce((acumulador, carro) =>
     acumulador + carro.modelo + " - R$: " + carro.preco.toFixed(2) + "\n", "")
-  resp.innerText = `Lista dos Carros Cadastrados\n${"-".repeat(40)}\n${lista}`
+  resposta.innerText = `Lista dos Carros Cadastrados\n${"-".repeat(40)}\n${lista}`
 })
 
 frm.btFiltrar.addEventListener("click", () => {
@@ -41,7 +41,7 @@ frm.btFiltrar.addEventListener("click", () => {
   for (const carro of carrosFilter) {       // percorre cada elemento do array 
     lista += `${carro.modelo} - R$: ${carro.preco.toFixed(2)}\n`
   }
-  resp.innerText = `Carros Até R$: ${maximo.toFixed(2)}\n${"-".repeat(40)}\n${lista}`
+  resposta.innerText = `Carros Até R$: ${maximo.toFixed(2)}\n${"-".repeat(40)}\n${lista}`
 })
 
 frm.btSimular.addEventListener("click", () => {
@@ -57,5 +57,5 @@ frm.btSimular.addEventListener("click", () => {
   for (const carro of carrosDesc) {       // percorre cada elemento do array 
     lista += `${carro.modelo} - R$: ${carro.preco.toFixed(2)}\n`
   }
-  resp.innerText = `Carros com desconto: ${desconto}%\n${"-".repeat(40)}\n${lista}`
+  resposta.innerText = `Carros com desconto: ${desconto}%\n${"-".repeat(40)}\n${lista}`
 })
