@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 2 - Capítulo 6</title>
+</head>
+<body>
+  <!-- elabore um programa que leia o nome e o números de acertos de um 
+   candidato inscritos em um concurso. Liste os candidatos a cada nclusão
+   e ao clicar no botão segunda fase 
+   -->
+     <h1>Programa Concurso</h1>
+  <form>
+        <p>Nome do candidato:
+      <input type="text" id="inNome" required autofocus>
+    </p>
+    <p>Número de acertos:
+      <input type="number" id="inAcertos" min="0" required>
+      <input type="submit" value="Adicionar">
+    </p>
+    <input type="button" value="Listar Todos" id="btListar">
+    <input type="button" value="Aprovados para 2ª fase" id="btAprovados2Fase">
+  </form>
+  <pre></pre>
+
+  <script src="exercicio3.js"></script>
+</body>
+</html>
