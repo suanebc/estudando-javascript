@@ -6,7 +6,7 @@ const candidatos = [];
 
 frm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const nome = frm.inNome.value        
+  const nome = frm.inNome.value
   const acertos = Number(frm.inAcertos.value);
   candidatos.push({ nome, acertos });
   frm.reset();
@@ -18,15 +18,25 @@ frm.addEventListener("submit", (e) => {
 
 frm.btListar.addEventListener("click", () => {
 
-  const lista = candidatos.reduce((acumulador,candidatos) =>
-    acumulador +candidatos.nome + " - " +candidatos.acertos + "\n", "")
-  resposta.innerText = `Lista dos candidatos Cadastrados\n${"-".repeat(40)}\n${lista}`
+  const lista = candidatos.reduce((acumulador, candidatos) =>
+    acumulador + candidatos.nome + " - " + candidatos.acertos + "\n", "")
+  resposta.innerText = `Lista dos candidatos Cadastrados\n${"-".repeat(100)}\n${lista}`
 });
 
 frm.btAprovados2Fase.addEventListener("click", () => {
-  const acertoS2Fase = prompt("Número de Acertos para aprovação");
-const segundaFase= candidatos.filter((candidato) => {
-  return candidato.acertos >= acertoS2Fase ;
+  
+
+  const acertoS2Fase = Number(prompt("Número de Acertos para aprovação"))
+  const aprovadosFilter = candidatos.filter(candidato => candidato.acertos >= acertoS2Fase)
+  if (aprovadosFilter.length == 0) {       
+    alert("Não há aprovados com acertos igual ao solicitado")
+    return
+  }
+  let lista = ""
+  for (const candidato of aprovadosFilter) {       
+    lista += `${candidato.nome} - ${candidato.acertos}\n`
+  }
+  resposta.innerText = `Aprovados para segunda fase\n ${"+".repeat(100)}\n${lista}`
+
 });
-resposta.innerText = `Lista dos candidatos Aprovados para 2ª fase\n${"-".repeat(40)}\n${lista}`
-});
+
