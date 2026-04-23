@@ -35,6 +35,6 @@ frm.addEventListener("submit", (e) => {
   if (erros.length == 0) {
     resposta.innerText = "Ok! Senha Válida";
   } else {
-    resposta.innerText = `Erro... A senha deve possuir ${erros.join(", ")}.`;
+    resposta.innerText = `Erro... A senha deve possuir ${erros.join(", ")}.]`;
   }
 })
